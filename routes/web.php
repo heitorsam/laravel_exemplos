@@ -13,22 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Utilizando Controllers */
+/* Criando rota via cmd php artisan make:controller ProdutoController */
 
-    $nome = "Heitor";
-    $idade = 28;
-    $array_num = [10,20,30,40,50];
-    $array_nomes = ["Heitor", "Bruna", "Xena", "Hercules"];
+use App\Http\Controllers\ProdutoController;
 
-    return view('welcome', [
-                            'nome' => $nome, 
-                            'idade' => $idade, 
-                            'profissao' => "Médico",
-                            'lista_num' => $array_num,
-                            'lista_nomes' => $array_nomes
+Route::get('/', [ProdutoController::class, 'index']);
+Route::get('/produtos/cadastrar', [ProdutoController::class, 'cadastrar']);
 
-                           ]);
-});
 
 Route::get('/contato', function () {
     return view('contato');

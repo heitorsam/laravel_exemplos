@@ -38,7 +38,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="./cadastrar_produtos" class="nav-link">Cadastrar Produtos</a>
+                        <a href="./produtos/cadastrar" class="nav-link">Cadastrar Produtos</a>
                     </li>
 
                     <li class="nav-item">
