@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 /* Utilizando Controllers */
 /* Criando rota via cmd php artisan make:controller ProdutoController */
 
+/* Para criar o banco é necessário configurar o arquivo .env */
+/* php artisan migrate */
+
 use App\Http\Controllers\ProdutoController;
 
 Route::get('/', [ProdutoController::class, 'index']);

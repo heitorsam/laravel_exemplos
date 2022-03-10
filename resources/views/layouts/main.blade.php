@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
     <head>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>@yield('title')</title>  
 
         <!-- CSS -->
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}">
 
         <!-- JS -->
-        <script src="js/scripts.js"></script>
+        <script type="text/javascript" src="{{asset('js/scripts.js')}}"></script>
+
+        <!-- FONT AWESOME -->
+        <script src="https://kit.fontawesome.com/a3000fd09d.js" crossorigin="anonymous"></script>
 
         <!-- GOOGLE FONTS -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
@@ -28,29 +33,29 @@
             <div class="collapse navbar-collapse" id="navbar">
 
                 <a href="./" class="navbar-brand">
-                    <img src="img/logo_laravel.png" alt="Logo site">
+                    <img src="{{asset('img/logo_laravel.png')}}" alt="Logo site">
                 </a>
 
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a href="./produtos" class="nav-link">Produtos</a>
+                        <a href="{{asset('./produtos')}}" class="nav-link">Produtos</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="./produtos/cadastrar" class="nav-link">Cadastrar Produtos</a>
+                        <a href="{{asset('./produtos/cadastrar')}}" class="nav-link">Cadastrar Produtos</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="./contato" class="nav-link">Contato</a>
+                        <a href="{{asset('./contato')}}" class="nav-link">Contato</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="./entrar" class="nav-link">Entrar</a>
+                        <a href="{{asset('./login')}}" class="nav-link">Entrar</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="./cadastra" class="nav-link">Cadastrar</a>
+                        <a href="{{asset('.cadastrar')}}" class="nav-link">Cadastrar</a>
                     </li>
 
                 </ul>
