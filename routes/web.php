@@ -23,7 +23,8 @@ use App\Http\Controllers\ProdutoController;
 
 Route::get('/', [ProdutoController::class, 'index']);
 Route::get('/produtos/cadastrar', [ProdutoController::class, 'cadastrar']);
-
+Route::get('/produtos/{id}', [ProdutoController::class, 'exibir']);
+Route::post('/cadastrar_produtos', [ProdutoController::class, 'fncCadastrarProduto']);
 
 Route::get('/contato', function () {
     return view('contato');

@@ -26,54 +26,68 @@
 
     </head>
 
-    <body>
+    <div class="container">
 
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <body>       
 
-            <div class="collapse navbar-collapse" id="navbar">
+            <nav class="navbar navbar-expand-lg navbar-light">
 
-                <a href="./" class="navbar-brand">
-                    <img src="{{asset('img/logo_laravel.png')}}" alt="Logo site">
-                </a>
+                <div class="collapse navbar-collapse" id="navbar">
 
-                <ul class="navbar-nav">
+                    <a href="/laravel_exemplos/public/" class="navbar-brand">
+                        <img src="{{asset('img/logo_laravel.png')}}" alt="Logo site">
+                    </a>
 
-                    <li class="nav-item">
-                        <a href="{{asset('./produtos')}}" class="nav-link">Produtos</a>
-                    </li>
+                    <ul class="navbar-nav">
 
-                    <li class="nav-item">
-                        <a href="{{asset('./produtos/cadastrar')}}" class="nav-link">Cadastrar Produtos</a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="{{asset('./produtos')}}" class="nav-link">Produtos</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a href="{{asset('./contato')}}" class="nav-link">Contato</a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="{{asset('./produtos/cadastrar')}}" class="nav-link">Cadastrar Produtos</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a href="{{asset('./login')}}" class="nav-link">Entrar</a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="{{asset('./contato')}}" class="nav-link">Contato</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a href="{{asset('.cadastrar')}}" class="nav-link">Cadastrar</a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="{{asset('./login')}}" class="nav-link">Entrar</a>
+                        </li>
 
-                </ul>
+                        <li class="nav-item">
+                            <a href="{{asset('.cadastrar')}}" class="nav-link">Cadastrar</a>
+                        </li>
 
-            </div>
-            
-        </nav>
+                    </ul>
 
-        @yield('content')
+                </div>
+                
+            </nav>
 
-    </body>
+           
+            <main>
+                <div class="container-fluid">
+                    <div class="row">
+                        @if(session('msg'))
+                            <p class="msg">{{ session('msg')}}<p>
+                        @endif
+                        @yield('content') 
+                    </div>
+                </div>
+            </main>    
 
-    <footer>
+        </body>
 
-        ---
-        <br>
-        Exemplos Laravel Heitor &copy; 2022
+        <footer>
 
-    </footer>
+            ---
+            <br>
+            Exemplos Laravel Heitor &copy; 2022
+
+        </footer>
+
+    </div>
 
 </html>
