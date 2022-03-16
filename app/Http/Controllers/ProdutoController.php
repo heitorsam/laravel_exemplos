@@ -13,7 +13,7 @@ class ProdutoController extends Controller
     public function index(){
 
         //COLETANDO TODOS AS FUNCIONALIDADES DA MODEL
-        $all_produtos = Produto::All();
+        $all_produtos = Produto::all()->sortByDesc('id');
 
         return view('welcome', ['all_prod' => $all_produtos]);
 
